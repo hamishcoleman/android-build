@@ -1,0 +1,12 @@
+sudo: enabled
+dist: bionic
+
+language: minimal
+
+install:
+    - sudo apt-get update
+    - sudo apt-get install -y moreutils
+    - sudo chronic apt-get install -y sudo python
+
+script:
+    - sudo ./build
