@@ -2,7 +2,7 @@ image: debian:stretch
 
 before_script:
     - apt-get update
-    - apt-get install -y sudo
+    - apt-get install -y sudo python
 
 android:
     script:
