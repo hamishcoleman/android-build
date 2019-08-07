@@ -29,7 +29,7 @@ PATH="$HOME/bin:$PATH"
 cd ~/android/lineage
 chronic repo init -u https://github.com/LineageOS/android.git -b cm-14.1
 
-chronic repo sync
+chronic repo sync 2>&1 |tail -1000
 
 source build/envsetup.sh
 breakfast herolte
