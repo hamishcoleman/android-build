@@ -1,0 +1,9 @@
+image: debian:stable
+
+before_script:
+    - apt-get update
+    - apt-get install -y sudo
+
+android:
+    script:
+        - sudo ./build
