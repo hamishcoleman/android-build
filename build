@@ -36,6 +36,9 @@ PATH="$HOME/bin:$PATH"
 cd ~/android/lineage
 chronic repo init -u https://github.com/LineageOS/android.git -b cm-14.1
 
+mkdir -p .repo/local_manifests
+cp local_themuppets.xml .repo/local_manifests/
+
 chronic repo sync 2>&1 |tail -1000
 
 source build/envsetup.sh
@@ -45,8 +48,7 @@ breakfast herolte
 set -e
 
 # FIXME:
-# "plug your existing S7 in via USB" - which is not possible on VM
-#./extract-files.sh
+#   ./extract-files.sh - possibly taken care of by themuppets repo above
 
 export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
 
