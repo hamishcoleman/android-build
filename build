@@ -39,11 +39,14 @@ chronic repo init -u https://github.com/LineageOS/android.git -b cm-14.1
 chronic repo sync 2>&1 |tail -1000
 
 source build/envsetup.sh
+
+set +e
 breakfast herolte
+set -e
 
 # FIXME:
 # "plug your existing S7 in via USB" - which is not possible on VM
-./extract-files.sh
+#./extract-files.sh
 
 export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
 
