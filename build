@@ -45,7 +45,6 @@ source build/envsetup.sh
 
 set +e
 breakfast herolte
-set -e
 
 # FIXME:
 #   ./extract-files.sh - possibly taken care of by themuppets repo above
