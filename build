@@ -33,11 +33,12 @@ chmod a+x ~/bin/repo
 
 PATH="$HOME/bin:$PATH"
 
+CI_DIR=`pwd`
 cd ~/android/lineage
 chronic repo init -u https://github.com/LineageOS/android.git -b cm-14.1
 
 mkdir -p .repo/local_manifests
-cp local_themuppets.xml .repo/local_manifests/
+cp $CI_DIR/local_themuppets.xml .repo/local_manifests/
 
 chronic repo sync 2>&1 |tail -1000
 
